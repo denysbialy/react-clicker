@@ -19,7 +19,7 @@ class Autoclickerbutton extends Component {
 
     this.isRendered = true;
     setTimeout(() => {
-      this.stopClicker();
+      this.stopAutoClicker();
     }, 30000);
   }
 
@@ -35,7 +35,7 @@ class Autoclickerbutton extends Component {
     }
   };
 
-  stopClicker = () => {
+  stopAutoClicker = () => {
     clearInterval(this.state.intervalId);
     this.setState({ intervalId: null });
   };
@@ -44,7 +44,7 @@ class Autoclickerbutton extends Component {
     return (
       <>
         <button onClick={this.startAutoClicker}>AutoClicker</button>
-        <button onClick={this.stopClicker}>StopClicker</button>
+        <button onClick={this.stopAutoClicker}>StopClicker</button>
       </>
     );
   }
